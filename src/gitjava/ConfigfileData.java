@@ -8,10 +8,12 @@ public class ConfigfileData {
 
 	
 	Properties prop;
+	FileInputStream fis;
 	
 	public ConfigfileData() throws IOException
-	{
-		FileInputStream fis=new FileInputStream("config.properties");
+	{ 
+		prop=new Properties();
+		fis=new FileInputStream("config.properties");
 		prop.load(fis);
 	}
 	
